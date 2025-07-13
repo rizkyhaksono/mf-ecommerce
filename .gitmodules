@@ -1,9 +1,9 @@
-[submodule "mf-ecommerce-provider"]
-	path = mf-ecommerce-provider
-	url = https://github.com/rizkyhaksono/mf-ecommerce-provider
-[submodule "mf-payment-consumer"]
-	path = mf-payment-consumer
-	url = https://github.com/rizkyhaksono/mf-payment-consumer
-[submodule "mf-product-consumer"]
-	path = mf-product-consumer
-	url = https://github.com/rizkyhaksono/mf-product-consumer
+[submodule "mf-ecommerce-consumer"]
+	path = mf-ecommerce-consumer
+	url = https://github.com/rizkyhaksono/mf-ecommerce-consumer
+[submodule "mf-payment-provider"]
+	path = mf-payment-provider
+	url = https://github.com/rizkyhaksono/mf-payment-provider
+[submodule "mf-product-provider"]
+	path = mf-product-provider
+	url = https://github.com/rizkyhaksono/mf-product-provider

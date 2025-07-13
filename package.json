@@ -1,10 +1,37 @@
 {
   "name": "mf-ecommerce",
   "version": "1.0.0",
-  "description": "Microfrontend for e-commerce",
+  "description": "Microfrontend for e-commerce using bun",
+  "license": "MIT",
   "author": {
     "name": "Rizky Haksono",
     "email": "mrizkyhaksono@gmail.com"
+  },
+  "workspaces":{
+    "packages": [
+      "mf-ecommerce-consumer",
+      "mf-payment-provider",
+      "mf-product-provider" 
+    ]
+  },
+  "scripts": {
+    "pkg:mf-ecommerce-consumer": "cd mf-ecommerce-consumer && bun install",
+    "pkg:mf-payment-provider": "cd mf-payment-provider && bun install",
+    "pkg:mf-product-provider": "cd mf-product-provider && bun install",
+    "dev:mf-ecommerce-consumer": "cd mf-ecommerce-consumer && bun run dev",
+    "dev:mf-payment-provider": "cd mf-payment-provider && bun run dev",
+    "dev:mf-product-provider": "cd mf-product-provider && bun run dev",
+    "start:mf-ecommerce-consumer": "cd mf-ecommerce-consumer && bun run preview",
+    "start:mf-payment-provider": "cd mf-payment-provider && bun run preview",
+    "start:mf-product-provider": "cd mf-product-provider && bun run preview",
+    "build:mf-ecommerce-consumer": "cd mf-ecommerce-consumer && bun run build",
+    "build:mf-payment-provider": "cd mf-payment-provider && bun run build",
+    "build:mf-product-provider": "cd mf-product-provider && bun run build",
+    "start": "concurrently \"bun run start:mf-ecommerce-consumer\" \"bun run start:mf-payment-provider\" \"bun run start:mf-product-provider\"",
+    "dev": "concurrently \"bun run dev:mf-ecommerce-consumer\" \"bun run dev:mf-payment-provider\" \"bun run dev:mf-product-provider\"",
+    "pkg": "concurrently \"bun run pkg:mf-ecommerce-consumer\" \"bun run pkg:mf-payment-provider\" \"bun run pkg:mf-product-provider\"",
+    "build": "concurrently \"bun run build:mf-ecommerce-consumer\" \"bun run build:mf-payment-provider\" \"bun run build:mf-product-provider\"",
+    "test": "jest --projects ./mf-ecommerce-consumer ./mf-product-provider ./mf-payment-provider"
   },
   "devDependencies": {
     "@types/bun": "latest"
