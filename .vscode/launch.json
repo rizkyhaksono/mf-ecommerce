@@ -29,13 +29,13 @@
       }
     },
     {
-      "name": "Start Provider Only",
+      "name": "Start Consumer Only",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/.bin/bun",
-      "args": [
+      "runtimeExecutable": "bun",
+      "runtimeArgs": [
         "run",
-        "start:mf-ecommerce-provider"
+        "dev:mf-ecommerce-consumer"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
@@ -44,13 +44,13 @@
       }
     },
     {
-      "name": "Start Payment Consumer Only",
+      "name": "Start Payment Provider Only",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/.bin/bun",
-      "args": [
+      "runtimeExecutable": "bun",
+      "runtimeArgs": [
         "run",
-        "start:mf-payment-consumer"
+        "dev:mf-payment-provider"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
@@ -59,13 +59,13 @@
       }
     },
     {
-      "name": "Start Product Consumer Only",
+      "name": "Start Product Provider Only",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/.bin/bun",
-      "args": [
+      "runtimeExecutable": "bun",
+      "runtimeArgs": [
         "run",
-        "start:mf-product-consumer"
+        "dev:mf-product-provider"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
