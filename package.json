@@ -7,11 +7,11 @@
     "name": "Rizky Haksono",
     "email": "mrizkyhaksono@gmail.com"
   },
-  "workspaces":{
+  "workspaces": {
     "packages": [
       "mf-ecommerce-consumer",
       "mf-payment-provider",
-      "mf-product-provider" 
+      "mf-product-provider"
     ]
   },
   "scripts": {
